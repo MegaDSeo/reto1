@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+
+    --Poppins:'Poppins', sans-serif;
+    --Open-Sans:'Open Sans', sans-serif;
+}
+
+body{
+    background-image: url(/images/bg-desktop.svg);
+    background-color: var(--Violet);
+}
+
+.container{
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: grid;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    min-height: 70vh;
+    
+}
+
+main img{
+    width: 600px;
+    object-fit: contain;
+    margin-top: 2rem;
+}
+
+
+main .main-paragraf h1{
+    color: #fff;
+    font-family: var(--Poppins);
+    margin-top: 4.5rem;
+    max-width: 400px;
+}
+
+main .main-paragraf p{
+    color: #fff;
+    font-family: var(--Open-Sans);
+    max-width:460px;
+    margin-top: 2rem;
+}
+
+main .main-paragraf button{
+    box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.55);
+    color: var(--Violet);
+    border: 0;
+    outline: 0;
+    padding: 15px 10px;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 16px;
+    font-family:var(--Poppins);
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: background-color 300ms,color 300ms;
+}
+
+main .main-paragraf button:hover{
+    background-color: var(--Soft-Magenta);
+    color: #fff;
+}
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;    
+}
+
+footer .icon{
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: border 300ms, color 300ms;
+}
+
+footer .icon:hover{
+    border:1px solid  var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+@media screen and (max-width:375px){
+    body{
+        background-image: url(/images/bg-mobile.svg);
+        background-position-x: -30px;
+        background-position-y: 10px;
+        background-repeat: no-repeat;
+        background-size: 120%;
+    }
+    nav{
+        margin-top: 2rem;
+    }
+
+    nav img{
+        width: 200px;
+    }
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main img{
+        margin-top: 3rem;
+        width: 330px;
+        
+    }
+
+    main .main-paragraf{
+        text-align: center;
+    }
+
+    footer{
+        margin-top: 3rem;
+        justify-content: center;
+        padding-bottom: 1rem;
+    }
+}
+
